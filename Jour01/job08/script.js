@@ -1,41 +1,40 @@
-const JourFerié = [
-    ['lundi', 1,"mai",2023],
-    ['lundi', 8,"mai",2023],
-    ['jeudi', 18,"mai",2023],
-    ['lundi', 29,"mai",2023],
-	['vendredi', 14,"juillet",2023],
-	['mardi', 15,"août",2023],
-	['mercredi', 1,"novembre",2023],
-	['samedi', 11,"novembre",2023],
-	['lundi', 25,"décembre",2023]
-];
+let Chiffre1 = prompt("Choisissez Votre Premier Chiffre");
+let Chiffre2 = prompt("Choisissez Votre Deuxieme Chiffre");
 
-const Weekend = ["samedis","dimanche"];
-
-//let date = ( input date );
-
-function jourtravaille(/*$date,*/Weekend,JourFerié){
-
-	let Jour ="lundi"; //$date[0]
-	let date =1; //$date[1]
-	let Mois="mai"; //$date[2]
-	let Année="2023"; //$date[3]
-
-	for (const jours of JourFerié) {
-		if ((Jour==jours[0]) && (date==jours[1]) && (Mois==jours[2]) && (Année==jours[3])){
-			console.log("Le " + Jour + " " +  date + " " + Mois + " " + Année + " est un jour férié");
-			break;
-		}else if((Jour==Weekend[0]) || (Jour==Weekend[1])){
-			console.log("Le " + Jour + " " +  date + " " + Mois + " " + Année + " est un Weekend");
-			break;
-		}else {
-			console.log("Le " + Jour + " " +  date + " " + Mois + " " + Année + " est un jour travaillé");
-	
+function sommenombrespremiers(Chiffre1,Chiffre2){
+	let calc = new Boolean(true);
+	//test if chiffre 1 est premier
+	for (let I=2;I<Chiffre1;I++){
+		if(Chiffre1%I==0){
+			console.log(Chiffre1+" est divisble par " + I);
+			console.log(Chiffre1+" n'est pas premier");
+			calc=Boolean(false);
+			break
 		}
+		else if (I == (Chiffre1-1)) {
+			console.log(Chiffre1+" est premier")
+		}
+	}
+	
+	//test if chiffre 1 est premier
+	for (let I=2;I<Chiffre2;I++){
+		if(Chiffre2%I==0){
+			console.log(Chiffre2+" est divisble par " + I);
+			console.log(Chiffre2+" n'est pas premier");
+			calc=Boolean(false);
+			break
+		}
+		else if (I == (Chiffre2-1)) {
+			console.log(Chiffre2+" est premier")
+		}
+	}
+	
+
+	if (calc==true){
 		
+		
+		console.log(parseInt(Chiffre1) + parseInt(Chiffre2) )
 	}
 }
 
-
- 
-jourtravaille(Weekend,JourFerié);
+sommenombrespremiers(Chiffre1,Chiffre2);
