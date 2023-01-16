@@ -8,6 +8,7 @@ function bisextile(année){
 		return false;
 	}
 }
+
 if (bisextile(année)=true){
 	alert(année + " est bissextile");
 }else if(bisextile(année)=false){
