@@ -9,7 +9,6 @@
 
 <body>
     <button id="button" onclick="showhide()">citation</button>
-    <article id="citation"> </article>
  
     
 </body>
