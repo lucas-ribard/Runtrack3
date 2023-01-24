@@ -10,7 +10,6 @@
 <body>
     <button id="button" onclick="showhide()">citation</button>
  
-    
 </body>
 
 </html>
