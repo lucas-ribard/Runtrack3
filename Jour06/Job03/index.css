@@ -1,0 +1,31 @@
+body{
+    display: flex;
+}
+
+.section{
+    background-color: #88c1d0;
+    height: 10vh;
+    width: 24vw;
+    margin: 20px; 
+}
+
+
+@media screen  and (min-width: 768px) and (max-width: 1599px){
+    body{
+        flex-wrap: wrap;
+    }
+
+    .section{ 
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body{
+        flex-direction: column;
+    }
+
+    .section{ 
+        width: 80vw;
+    }
+}
